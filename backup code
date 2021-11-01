@@ -1,0 +1,32 @@
+(backup code in case the zip file doesn't work)
+
+#import statements
+import turtle as t
+import random
+
+
+#screen
+window = t.Screen()
+
+t.goto(0,0)
+t.speed(100)
+#makes turtle go to click position
+def go_here(x, y):
+   t.goto(x,y)
+#listen for onclick
+window.onclick(go_here)
+window.mainloop()
+drawing_prompt = ['BAT', 'PUMPKIN', 'WITCH HAT', 'CANDY CORN', 'SKULL', 'KNIFE', 'GHOST', 'BLACK CAT', 'MS. JIN', 'COFFIN', "GRAVESTONE", "JACK O' LANTERN"]
+t.penup()
+t.goto(-190,190)
+t.write("Please draw (a): ")
+t.goto(-190, 180)
+t.write(random.choice(drawing_prompt))
+t.done()
+t.goto(-60,0)
+t.pendown()
+
+window.bgpic("grid.png")
+# makes turtle paintbrush
+window.addshape('paint.png')
+t.shape('paint.png')
